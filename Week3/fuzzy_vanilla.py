@@ -44,7 +44,12 @@ def fuzzification_conditions(condition):
 
 # Other fuzzification functions go here
 
-# You can create a function to apply the rules here
+def inference(conditions_fuzzy, visibility_fuzzy):
+    # If visibility is bad or conditions are rough – speed is low.
+    rule1 = max(conditions_fuzzy["rough"], visibility_fuzzy["bad"])
+    
+    # Apply other rules here
+
 
 # #### For defuzzification!
 def aggregated_membership(x, fuzzy_strengths):
